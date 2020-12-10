@@ -6,3 +6,6 @@ Example contains:
 - Binding surface to encoder to produce H.264 samples
 - Creating surface view and binding decoder to it
 - Configuring decoder to accept H.264 and draw onto surface view
+
+# history
+2020/12/10 -- two decoders test

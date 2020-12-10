@@ -66,7 +66,10 @@ public class VideoDecoder implements VideoCodec {
             // it is basically the first sample from encoder with flag: BUFFER_FLAG_CODEC_CONFIG
             format.setByteBuffer("csd-0", csd0);
             try {
-                mCodec = MediaCodec.createDecoderByType(VIDEO_FORMAT);
+                if (true)
+                    mCodec = MediaCodec.createDecoderByType(VIDEO_FORMAT);
+                else if (true)
+                    mCodec = MediaCodec.createByCodecName("OMX.google.h264.decoder");
             } catch (IOException e) {
                 throw new RuntimeException("Failed to create codec", e);
             }
